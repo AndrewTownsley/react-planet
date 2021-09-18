@@ -1,10 +1,16 @@
 import './App.css';
+import PlanetNav from './Components/PlanetNav';
+import { Link, Route, Switch, BrowserRouter } from 'react-router-dom';
+
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <h1>The Planets</h1>
+        <PlanetNav/>
+      </div>  
+    </BrowserRouter>
   );
 }
 
