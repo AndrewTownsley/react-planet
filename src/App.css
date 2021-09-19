@@ -1,3 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
+
 * {
-  font-family: ;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  background-color: hsl(240, 67%, 8%);
+  color: #fff;
+}
+
+h1 {
+  font-size: 80px;
+  font-family: "Antonio";
+}
+
+h2 {
+  font-size: 40px;
+  font-family: "Antonio";
+  letter-spacing: -1.5;
+}
+
+h3 {
+  font-size: 12px;
+  font-family: "Spartan";
+  letter-spacing: 2.6;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 11px;
+  font-family: "Spartan";
+  letter-spacing: 1;
+  font-weight: 700;
+}
+
+p {
+  font-size: 14px;
+  font-family: "Spartan";
+  font-weight: 400;
+  color: hsl(240, 6%, 54%);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
 }
