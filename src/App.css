@@ -12,8 +12,10 @@
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 28px;
   font-family: "Antonio";
+  font-weight: 400;
+  padding: 1rem;
 }
 
 h2 {
@@ -32,7 +34,8 @@ h3 {
 h4 {
   font-size: 11px;
   font-family: "Spartan";
-  letter-spacing: 1;
+  letter-spacing: 1px;
+  line-height: 25px;
   font-weight: 700;
 }
 
@@ -44,6 +47,25 @@ p {
 }
 
 a {
-  color: #fff;
+  color: hsl(0, 0%, 75%);
   text-decoration: none;
+  padding: 1rem;
+}
+
+/* -----------------------------------------------PlanetNav */
+
+.planet-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 25%);
+}
+
+.planet-nav-list {
+  display: flex;
+  margin: 0.5rem;
+}
+
+.planet-main {
+  height: 100vh;
 }

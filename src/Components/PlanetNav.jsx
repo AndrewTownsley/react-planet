@@ -6,13 +6,15 @@ import data from '../data.json'
 const PlanetNav = () => {
                  
         return (
-            <div>
-                <h1>The Planets</h1>
+            <div className="planet-nav">
+                <h1>THE PLANETS</h1>
                 <nav>
-                    <ul>
+                    <ul className="planet-nav-list">
                         {
                             data.map((planet) => 
-                                <NavLink key={planet.name} to={`/${planet.name}`}>{planet.name}</NavLink>
+                                <NavLink key={planet.name} to={`/${planet.name}`}>
+                                    <h4>{planet.name.toUpperCase()}</h4>
+                                </NavLink>
                             )
                         }
                     </ul>
