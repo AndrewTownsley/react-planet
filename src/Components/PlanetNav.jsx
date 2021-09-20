@@ -3,7 +3,8 @@ import { NavLink, Route, Switch, BrowserRouter } from 'react-router-dom';
 import data from '../data.json'
 
 
-const PlanetNav = () => {
+const PlanetNav = ({ setPlanet }) => {
+
                  
         return (
             <div className="planet-nav">
@@ -12,7 +13,7 @@ const PlanetNav = () => {
                     <ul className="planet-nav-list">
                         {
                             data.map((planet) => 
-                                <NavLink key={planet.name} to={`/${planet.name}`}>
+                                <NavLink onClick={() => setPlanet(`${planet.name}`)} key={planet.name} to={`/${planet.name}`}>
                                     <h4>{planet.name.toUpperCase()}</h4>
                                 </NavLink>
                             )

@@ -9,19 +9,21 @@ import PlanetMain from './Components/PlanetMain';
 function App() {
   const [planet, setPlanet] = useState('Earth');
 
-  console.log(data);
-
   return (
     <BrowserRouter>
       <div className="App">
-            <PlanetNav/>
+            <PlanetNav
+              setPlanet={setPlanet}
+            />
         <Switch>
 
           {
             data.map((planet) => 
-              <Route exact path={`/${planet.name}`}>
+              <Route key={planet.name} path={`/${planet.name}`}>
                   <PlanetMain
+                    key={planet}
                     planet={planet}
+                    setPlanet={setPlanet}
                   />
               </Route>
             )
