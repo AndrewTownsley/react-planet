@@ -5,10 +5,8 @@ import data from './data.json';
 import PlanetNav from './Components/PlanetNav';
 import PlanetMain from './Components/PlanetMain';
 
-
 function App() {
   const [planet, setPlanet] = useState('Earth');
-  console.log(planet)
 
   // const handlePlanetRoute = () => {
   //   setPlanet(planet)
@@ -16,6 +14,7 @@ function App() {
 
   return (
     <BrowserRouter>
+
       <div className="App">
             <PlanetNav
               setPlanet={setPlanet}
@@ -27,10 +26,11 @@ function App() {
 
 
           {
-            data.map((planet) => 
+            data.map((planet, index) => 
             <Route key={planet.name} exact path={`/${planet.name}`}>
                   <PlanetMain
                     key={planet}
+                    index={index}
                     planet={planet}
                     setPlanet={setPlanet}
                     />

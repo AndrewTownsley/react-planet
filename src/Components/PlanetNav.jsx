@@ -12,9 +12,10 @@ const PlanetNav = ({ planet, setPlanet }) => {
                 <nav>
                     <ul className="planet-nav-list">
                         {
-                            data.map((planet) => 
+                            data.map((planet, index) => 
                                 <NavLink onClick={() => setPlanet(`${planet.name}`)} 
                                     key={planet.name} 
+                                    index={index}
                                     to={`/${planet.name}`}
                                     className={planet.name}
                                 >
