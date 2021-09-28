@@ -1,6 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
 
+#root {
+  --font-xl: 80px;
+  --line-height-xl: 103px;
+
+  --font-large: 40px;
+  --line-height-l: 52px;
+  --letter-spc-l: -1.5px;
+
+  --font-med: 12px;
+  --line-height-m: 25px;
+  --letter-spc-m: 2.6px;
+
+  --font-small: 11px;
+  --letter-spc-s: 1px;
+
+  --font-p: 14px;
+
+  --font-spartan-reg: "Spartan";
+  --font-spartan-bold: "Spartan Bold";
+  --font-antonio: "Antonio";
+  --font-white: #fff;
+  --font-dark-gray: #38384f;
+  --font-lgt-gray: #838391;
+  --main-bg: #070724;
+
+  --btn-bg: #070724;
+  --btn-active: #419ebb;
+  --btn-hover: #38384f;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +43,7 @@
 
 h1 {
   font-size: 28px;
-  font-family: "Antonio";
+  font-family: var(--font-antonio);
   font-weight: 400;
   padding: 1rem;
 }
@@ -43,7 +73,12 @@ p {
   font-size: 14px;
   font-family: "Spartan";
   font-weight: 400;
-  color: hsl(240, 6%, 54%);
+  color: var(--font-white);
+  line-height: var(--line-height-m);
+}
+
+button {
+  cursor: pointer;
 }
 
 a {
@@ -120,6 +155,65 @@ a:hover {
   background: hsla(222, 87%, 56%, 1);
 }
 
+/* //------------------------------------------  Planet - Main */
+
 .planet-main {
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.planet-main-grid {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  /* margin: 4rem; */
+}
+
+.planet-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0 0 5rem;
+}
+
+.planet-main-overview {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 6rem 0 0;
+}
+
+.planet-main-overview h1 {
+  font-size: var(--font-xl);
+  padding-top: 0;
+}
+
+.planet-img-btn-container {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin: 2.5rem 0;
+}
+
+.planet-img-btn {
+  height: 48px;
+  border: 1px solid var(--font-dark-gray);
+  background: var(--btn-bg);
+  text-align: left;
+  padding-left: 0.5rem;
+  color: var(--font-lgt-gray);
+  font-size: var(--font-med);
+  letter-spacing: var(--letter-spc-m);
+  margin: 0.5rem 0;
+}
+
+.planet-img-span {
+  color: var(--font-white);
+  padding-left: 0.5rem;
+}
+
+.planet-img-btn:hover {
+  background-color: var(--btn-hover);
+}
+
+.planet-img-btn:active {
+  background: var(--btn-active);
 }

@@ -8,9 +8,14 @@ import PlanetMain from './Components/PlanetMain';
 function App() {
   const [planet, setPlanet] = useState('Earth');
 
-  // const handlePlanetRoute = () => {
-  //   setPlanet(planet)
-  // }
+ const importAssets = (a) => {
+    let images = {};
+    a.keys().map((item, index) => { 
+     return images[item.replace('./', '')] = a(item)})
+    return images
+ }
+
+ const images = importAssets(require.context('./assets', false, /\.(png|jpe?g|svg)$/))
 
   return (
     <BrowserRouter>
