@@ -1,5 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react';
+
+
 const PlanetMain = ({ planet, index, setPlanet }) => {
+    const [activeClass, setActiveClass] = useState(false); 
+    const toggleBtnColor = () => {
+        setActiveClass(false)
+        setActiveClass(activeClass ? `planet-img-btn ${planet.name}.color` : 'planet-img-btn')
+    }
 
     return (
         
@@ -11,17 +18,17 @@ const PlanetMain = ({ planet, index, setPlanet }) => {
                 <div className="planet-main-overview">
                     <h1>{planet.name.toUpperCase()}</h1>
                     <p>{planet.overview.content}</p>
-                    <h4><a href={planet.structure.source}>Source: <span>Wikipedia</span></a></h4>
+                    <h4 className="source-link">Source: <a href={planet.structure.source}><span>Wikipedia</span></a></h4>
                     <div className="planet-img-btn-container">
-                        <button className="planet-img-btn">
+                        <button onClick={()=>setActiveClass} className={activeClass}>
                             01
                             <span className="planet-img-span">OVERVIEW</span>
                         </button>
-                        <button className="planet-img-btn">
+                        <button onClick={()=>setActiveClass} className={activeClass}>
                             02
                             <span className="planet-img-span">INTERNAL STRUCTURE</span>
                         </button>
-                        <button className="planet-img-btn">
+                        <button onClick={()=>setActiveClass} className={activeClass}>
                             03
                             <span className="planet-img-span">SURFACE GEOLOGY</span>
                         </button>

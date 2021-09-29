@@ -166,7 +166,8 @@ a:hover {
   display: grid;
   grid-template-columns: 60% 40%;
   margin: 3rem auto 0;
-  width: 80%;
+  width: 100%;
+  max-width: 1190px;
 }
 
 .planet-img-container {
@@ -184,7 +185,16 @@ a:hover {
 
 .planet-main-overview h1 {
   font-size: var(--font-xl);
-  padding-top: 0;
+  padding: 0 0 1rem 0;
+}
+
+.source-link {
+  font-family: var(--font-spartan-reg);
+  color: var(--font-lgt-gray);
+}
+
+.source-link a span {
+  text-decoration: underline;
 }
 
 .planet-img-btn-container {
@@ -223,13 +233,13 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 70%;
+  max-width: 970px;
   margin: 0 auto;
 }
 
 .planet-data-card {
   border: var(--border);
-  padding: 1rem 2rem 1rem 1rem;
+  padding: 1rem 3rem 1rem 1rem;
   margin: 2rem 0.75rem;
   width: 100%;
   text-align: left;
