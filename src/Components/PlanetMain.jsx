@@ -31,19 +31,19 @@ const PlanetMain = ({ planet, index, setPlanet }) => {
             <div className="planet-data-display">
                 <div className="planet-data-card">
                     <h4>ROTATION TIME</h4>
-                    <h2>DAYS</h2>
+                    <h2>1.4DAYS</h2>
                 </div>
                 <div className="planet-data-card">
                     <h4>REVOLUTION TIME</h4>
-                    <h2>DAYS</h2>
+                    <h2>123 DAYS</h2>
                 </div>
                 <div className="planet-data-card">
                     <h4>RADIUS</h4>
-                    <h2>KM</h2>
+                    <h2> 1234 KM</h2>
                 </div>
                 <div className="planet-data-card">
                     <h4>AVERAGE TEMP.</h4>
-                    <h2>C</h2>
+                    <h2>100 C</h2>
                 </div>
             </div>
         </div>

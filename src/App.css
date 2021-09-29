@@ -29,6 +29,8 @@
   --btn-bg: #070724;
   --btn-active: #419ebb;
   --btn-hover: #38384f;
+
+  --border: 1px solid #38384f;
 }
 
 * {
@@ -84,7 +86,6 @@ button {
 a {
   color: hsl(0, 0%, 75%);
   text-decoration: none;
-  /* padding: 0.75rem; */
   margin: 0.75rem;
   transition: ease-in-out 0.2s;
 }
@@ -164,21 +165,21 @@ a:hover {
 .planet-main-grid {
   display: grid;
   grid-template-columns: 60% 40%;
-  /* margin: 4rem; */
+  margin: 3rem auto 0;
+  width: 80%;
 }
 
 .planet-img-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5rem 0 0 5rem;
 }
 
 .planet-main-overview {
   width: 350px;
   display: flex;
   flex-direction: column;
-  margin: 3rem 6rem 0 0;
+  justify-content: center;
 }
 
 .planet-main-overview h1 {
@@ -195,7 +196,7 @@ a:hover {
 
 .planet-img-btn {
   height: 48px;
-  border: 1px solid var(--font-dark-gray);
+  border: var(--border);
   background: var(--btn-bg);
   text-align: left;
   padding-left: 0.5rem;
@@ -216,4 +217,29 @@ a:hover {
 
 .planet-img-btn:active {
   background: var(--btn-active);
+}
+
+.planet-data-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.planet-data-card {
+  border: var(--border);
+  padding: 1rem 2rem 1rem 1rem;
+  margin: 2rem 0.75rem;
+  width: 100%;
+  text-align: left;
+}
+
+.planet-data-card h4 {
+  color: var(--font-lgt-gray);
+}
+
+.planet-data-card h2 {
+  font-family: var(--font-antonio);
+  font-weight: 400;
 }
