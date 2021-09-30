@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
+import { COLORS } from '../constants';
 
 
 const PlanetMain = ({ planet, index, setPlanet }) => {
-    const [activeClass, setActiveClass] = useState(false); 
-    const toggleBtnColor = () => {
-        setActiveClass(false)
-        setActiveClass(activeClass ? `planet-img-btn ${planet.name}.color` : 'planet-img-btn')
-    }
+    const [color, setColor] = useState('transparent')
+ 
 
     return (
         
@@ -20,15 +18,15 @@ const PlanetMain = ({ planet, index, setPlanet }) => {
                     <p>{planet.overview.content}</p>
                     <h4 className="source-link">Source: <a href={planet.structure.source}><span>Wikipedia</span></a></h4>
                     <div className="planet-img-btn-container">
-                        <button onClick={()=>setActiveClass} className={activeClass}>
+                        <button onClick={()=>setColor(`COLORS.${planet.name}`)} style={{background:color}} className="planet-img-btn">
                             01
                             <span className="planet-img-span">OVERVIEW</span>
                         </button>
-                        <button onClick={()=>setActiveClass} className={activeClass}>
+                        <button onClick={()=>setColor(`${planet.name}`.COLORS)} style={{background:color}} className="planet-img-btn">
                             02
                             <span className="planet-img-span">INTERNAL STRUCTURE</span>
                         </button>
-                        <button onClick={()=>setActiveClass} className={activeClass}>
+                        <button onClick={()=>setColor(`${planet.name}`.COLORS)} style={{background:color}} className="planet-img-btn">
                             03
                             <span className="planet-img-span">SURFACE GEOLOGY</span>
                         </button>
