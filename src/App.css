@@ -31,6 +31,15 @@
   --btn-hover: #38384f;
 
   --border: 1px solid #38384f;
+
+  --mercury: hsla(194, 48%, 49%, 1);
+  --venus: hsla(33, 82%, 61%, 1);
+  --earth: rgb(163, 120, 231);
+  --mars: hsla(10, 63%, 51%, 1);
+  --jupiter: hsla(2, 68%, 53%, 1);
+  --saturn: hsla(17, 73%, 46%, 1);
+  --uranus: hsla(169, 73%, 44%, 1);
+  --neptune: hsla(222, 87%, 56%, 1);
 }
 
 * {
@@ -204,19 +213,7 @@ a:hover {
   margin: 2.5rem 0;
 }
 
-.planet-img-btn {
-  height: 48px;
-  border: var(--border);
-  background: var(--btn-bg);
-  text-align: left;
-  padding-left: 0.5rem;
-  color: var(--font-lgt-gray);
-  font-size: var(--font-med);
-  letter-spacing: var(--letter-spc-m);
-  margin: 0.5rem 0;
-}
-
-.planet-img-span {
+/* .planet-img-span {
   color: var(--font-white);
   padding-left: 0.5rem;
 }
@@ -227,7 +224,7 @@ a:hover {
 
 .planet-img-btn:active {
   background: var(--btn-active);
-}
+} */
 
 .planet-data-display {
   display: flex;
@@ -252,31 +249,4 @@ a:hover {
 .planet-data-card h2 {
   font-family: var(--font-antonio);
   font-weight: 400;
-}
-
-/* ----------------------------Planet Colors  */
-
-.mercury {
-  background: hsla(194, 48%, 49%, 1);
-}
-.venus {
-  background: hsla(33, 82%, 61%, 1);
-}
-.earth {
-  background: hsla(263, 67%, 51%, 1);
-}
-.mars {
-  background: hsla(10, 63%, 51%, 1);
-}
-.jupiter {
-  background: hsla(2, 68%, 53%, 1);
-}
-.saturn {
-  background: hsla(17, 73%, 46%, 1);
-}
-.uranus {
-  background: hsla(169, 73%, 44%, 1);
-}
-.neptune {
-  background: hsla(222, 87%, 56%, 1);
 }

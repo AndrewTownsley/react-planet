@@ -1,6 +1,7 @@
 import './App.css';
 import { Link, Route, Switch, BrowserRouter, Redirect } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 import data from './data.json';
 import PlanetNav from './Components/PlanetNav';
 import PlanetMain from './Components/PlanetMain';

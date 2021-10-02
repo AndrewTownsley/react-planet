@@ -1,0 +1,24 @@
+.mercury {
+  background: hsla(194, 48%, 49%, 1);
+}
+.venus {
+  background: hsla(33, 82%, 61%, 1);
+}
+.earth {
+  background: rgb(163, 120, 231);
+}
+.mars {
+  background: hsla(10, 63%, 51%, 1);
+}
+.jupiter {
+  background: hsla(2, 68%, 53%, 1);
+}
+.saturn {
+  background: hsla(17, 73%, 46%, 1);
+}
+.uranus {
+  background: hsla(169, 73%, 44%, 1);
+}
+.neptune {
+  background: hsla(222, 87%, 56%, 1);
+}
