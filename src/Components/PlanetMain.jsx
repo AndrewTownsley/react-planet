@@ -1,4 +1,5 @@
 import ToggleBtn from './ToggleBtn';
+import data from '../data.json';
 
 
 const PlanetMain = ({ planet }) => { 
@@ -14,41 +15,27 @@ const PlanetMain = ({ planet }) => {
                     <h1>{planet.name.toUpperCase()}</h1>
                     <p>{planet.overview.content}</p>
                     <h4 className="source-link">Source: <a href={planet.structure.source}><span>Wikipedia</span></a></h4>
-                    <ToggleBtn
-                        planet={planet}
-                    />
-                    {/* <div className="planet-img-btn-container">
-                        <button onClick={()=>setColor(`COLORS.${planet.name}`)} style={{background:color}} className="planet-img-btn">
-                            01
-                            <span className="planet-img-span">OVERVIEW</span>
-                        </button>
-                        <button onClick={()=>setColor(`${planet.name}`.COLORS)} style={{background:color}} className="planet-img-btn">
-                            02
-                            <span className="planet-img-span">INTERNAL STRUCTURE</span>
-                        </button>
-                        <button onClick={()=>setColor(`${planet.name}`.COLORS)} style={{background:color}} className="planet-img-btn">
-                            03
-                            <span className="planet-img-span">SURFACE GEOLOGY</span>
-                        </button>
-                    </div> */}
+            <ToggleBtn
+                planet={planet}
+            />
             </div>
             </div>
             <div className="planet-data-display">
                 <div className="planet-data-card">
                     <h4>ROTATION TIME</h4>
-                    <h2>1.4DAYS</h2>
+                    <h2>{planet.rotation}</h2>
                 </div>
                 <div className="planet-data-card">
                     <h4>REVOLUTION TIME</h4>
-                    <h2>123 DAYS</h2>
+                    <h2>{planet.revolution}</h2>
                 </div>
                 <div className="planet-data-card">
                     <h4>RADIUS</h4>
-                    <h2> 1234 KM</h2>
+                    <h2>{planet.radius}</h2>
                 </div>
                 <div className="planet-data-card">
                     <h4>AVERAGE TEMP.</h4>
-                    <h2>100 C</h2>
+                    <h2>{planet.temperature}</h2>
                 </div>
             </div>
         </div>

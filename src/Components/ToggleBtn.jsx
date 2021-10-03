@@ -19,16 +19,15 @@ import React, { useState } from 'react';
     background: var(--btn-bg);
     text-align: left;
     padding-left: 0.5rem;
-    color: var(--font-lgt-gray);
+    color: var(--font-white);
     font-size: var(--font-med);
     letter-spacing: var(--letter-spc-m);
     margin: 0.5rem 0;
     &: hover {
-        background-color: red;
+        background-color: var(--btn-hover);
     }
     ${({activeBtn}) => activeBtn && 
     `background-color: var(--btn-hover);
-     color: white;
     `}
     `
 
